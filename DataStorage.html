@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Storage</title>
+    <script src="./DataStorage.js" defer></script>
+    <script src="./Auth_Outh2.js" defer></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+    <div class="container justify-center m-auto">
+        <div class="logout justify-end">
+            <img src="./logout.png" id="logout" class="w-8 h-8 cursor-pointer mt-2 justify-end translate-x-[1250px]" alt="">
+        </div>
+        <h1 class="text-center text-blue-600 font-bold text-3xl mt-3">Data Storage</h1>
+        <form class="shadow-md shadow-gray-300 w-[45%] p-6 justify-center m-auto text-center">
+            <input class="border-2 rounded-lg p-[3px] outline-blue-600" type="text"   placeholder="Enter your Name"  name="name" id="name">  
+            <input class="border-2 rounded-lg p-[3px] outline-blue-600" type="number" placeholder="Enter your age"  name="age" id="age">  <br>
+            <input class="border-2 rounded-lg p-[3px] outline-blue-600" type="text"   placeholder="Enter your city"  name="city" id="city">  
+            <input class="border-2 rounded-lg p-[3px] outline-blue-600 mt-2" type="text"   placeholder="Enter your address"  name="address" id="address"> <br>
+            <input class="border-2 rounded-lg p-[3px] outline-blue-600 mt-2" type="text"   placeholder="Enter your state"  name="state" id="state"> 
+            <input class="border-2 rounded-lg p-[3px] outline-blue-600" type="text"   placeholder="Enter your country"   name="country" id="country">  <br>
+            <input class="border-2 rounded-lg p-[3px] outline-blue-600 mt-2" type="number" placeholder="Enter your phone"  name="phone" id="phone">  
+            <input class="border-2 rounded-lg p-[3px] outline-blue-600 mt-2" type="email"  placeholder="Enter your email" name="email" id="email">  <br>
+            <button class="bg-green-600 w-[25%] text-white mt-2 rounded-lg" type="button" onclick="addData()">Add</button> 
+            <button  class="bg-orange-600 w-[25%] mt-2 rounded-lg text-white" type="button" onclick="updateData()">update</button>
+        </form>
+        <table id="data-table" class="bg-gray-600 p-2 text-white w-[80%] justify-center m-auto translate-y-6">
+            <thead class="p-2">
+                <tr>
+                    <th>Name</th>
+                    <th>Age</th>
+                    <th>city</th>
+                    <th>address</th>
+                    <th>state</th>
+                    <th>country</th>
+                    <th>phone</th>
+                    <th>email</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody id="table-body" class="p-2 bg-gray-400">
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>
